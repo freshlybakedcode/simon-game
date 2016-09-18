@@ -3,10 +3,18 @@
 var strictBtn = document.getElementsByClassName('button-strict')[0]
 var strictLed = document.getElementsByClassName('strict')[0].children[0];
 var switchSlider = document.getElementsByClassName('switch-slider')[0];
+var scoreCount = document.getElementsByClassName('number')[0];
 
+console.log(scoreCount);
+
+var playerScore;
 
 function isGameOn() {
 	return switchSlider.classList.contains('on');
+}
+
+function updateScore() {
+
 }
 
 function turnGameOff(){
@@ -17,7 +25,8 @@ function turnGameOff(){
 		strictLed.classList.remove('lit');
 	}
 	//If the score is visible, hide it
-	
+	playerScore = '';
+	updateScore();
 	//If the pads are functional, unfunction them
 }
 
@@ -58,6 +67,5 @@ function toggleClass(element, cl) {
 
 // Populate Event Listeners on page load
 (function () {
-	populateListeners();	
+	populateListeners();
 })();
-
