@@ -36,3 +36,12 @@
     background-clip: border-box;
     background-attachment: scroll;
 }
+
+@mixin setBgColorAndLitClass($originalColor) {
+  background-color: $originalColor;
+
+  &:hover {
+    background-color: lighten($originalColor, 15%);
+    cursor: pointer;
+  }
+}
